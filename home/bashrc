@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# Make autocompletion case-insensitive
+if [ ! -f "$HOME/.inputrc" ]
+then
+    echo "\$include /etc/inputrc" > "$HOME/.inputrc"
+    echo "set completion-ignore-case On" >> "$HOME/.inputrc"
+fi
+
+# Source other environments and add paths
+if [ -f "$HOME/.cargo/env" ]
+then
+    source "$HOME/.cargo/env"
+fi
+
+if [ -d "$HOME/.local/bin" ]
+then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
+# Configure behavior
+export PS1="[\W]$ "
+export HISTCONTROL="ignoreboth:erasedups"
+export MANPAGER="bat -l man -p"
+export EDITOR="nvim"
+
+bind "set show-all-if-ambiguous on"
+bind "TAB:menu-complete"
+bind "\"\e[Z\":menu-complete-backward"
+
+# Set aliases
+alias ls="exa --long"
+alias lsa="exa --long --all"
+alias tree="exa --tree --ignore-glob '.git|.svn|target|out|build'"
+alias bat="bat --theme ansi"
+alias vim="nvim"
+alias sudo="doas "
+alias so="source $HOME/.bashrc"
+alias open="xdg-open"
+alias ..="cd .."
+alias reboot="systemctl reboot"
+alias poweroff="systemctl poweroff"
+alias suspend="systemctl suspend"
