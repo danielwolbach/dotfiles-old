@@ -6,8 +6,8 @@ font:
 window:
   dynamic_padding: true
   padding:
-    x: 16
-    y: 16
+    x: 8
+    y: 8
 
 background_opacity: 1.0
 
