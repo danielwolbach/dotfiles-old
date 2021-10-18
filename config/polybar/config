@@ -5,15 +5,15 @@ black = #32344a
 blue = #7aa2f7
 green = #9ece6a
 yellow = #e0af68
-brightblack = #444b6a
+brfightblack = #444b6a
 brightblue = #7da6ff
 
 [bar/main]
 font-0 = JetBrainsMono Nerd Font:size=12:style=Regular;3
 font-1 = JetBrainsMono Nerd Font:size=12:style=Bold;3
 height = 32
-modules-left = workspace edge-brightblack workspace-overview edge-brightblack edge-background title
-modules-right = processor seperator-background memory edge-background edge-brightblack volume edge-brightblack edge-blue date time edge-blue
+modules-left = workspace edge-black workspace-overview edge-black edge-background title
+modules-right = processor seperator-background memory edge-background edge-black volume edge-black edge-blue date time edge-blue
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -44,11 +44,11 @@ label-empty-font = 2
 type = internal/bspwm
 label-focused =
 label-focused-padding = 1
-label-focused-background = ${colors.brightblack}
+label-focused-background = ${colors.black}
 label-focused-font = 2
 label-occupied = %index% %name%
 label-occupied-padding = 1
-label-occupied-background = ${colors.brightblack}
+label-occupied-background = ${colors.black}
 label-occupied-font = 2
 label-urgent = %index% %name%
 label-urgent-padding = 1
@@ -57,7 +57,7 @@ label-urgent-foreground = ${colors.background}
 label-urgent-font = 2
 label-empty = %index% %name%
 label-empty-padding = 1
-label-empty-background = ${colors.brightblack}
+label-empty-background = ${colors.black}
 label-empty-font = 2
 
 [module/date]
@@ -86,9 +86,9 @@ label-font = 2
 type = internal/pulseaudio
 label-volume = 墳 %percentage%%
 label-muted = ﱝ Muted
-label-volume-background = ${colors.brightblack}
+label-volume-background = ${colors.black}
 label-volume-padding = 1
-label-muted-background = ${colors.brightblack}
+label-muted-background = ${colors.black}
 label-muted-padding = 1
 
 [module/title]
@@ -114,20 +114,15 @@ type = custom/text
 content = " "
 content-background = ${colors.blue}
 
-[module/edge-brightblack]
+[module/edge-black]
 type = custom/text
 content = " "
-content-background = ${colors.brightblack}
+content-background = ${colors.black}
 
 [module/edge-background]
 type = custom/text
 content = " "
 content-background = ${colors.background}
-
-[module/edge-black]
-type = custom/text
-content = " "
-content-background = ${colors.black}
 
 [module/seperator-background]
 type = custom/text
