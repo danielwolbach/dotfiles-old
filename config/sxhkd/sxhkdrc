@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+super + Return
+    alacritty
+
+super + p
+    rofi -show drun
+
+super + ctrl + q
+    bspc quit
+
+super + ctrl + r
+    bspc wm -r
+
+super + q
+    bspc node -c
+
+super + j
+    bspc node -f next.local.!hidden.window
+
+super + k
+    bspc node -f prev.local.!hidden.window
+
+super + l
+    bspc desktop -f next.local
+
+super + h
+    bspc desktop -f prev.local
+
+super + alt + l
+    bspc node -d next.local; bspc desktop -f next.local
+
+super + alt + h
+    bspc node -d prev.local; bspc desktop -f prev.local
+
+XF86AudioRaiseVolume
+    pamixer --unmute --increase 5
+
+XF86AudioLowerVolume
+    pamixer --unmute --decrease 5
+
+XF86AudioMute
+    pamixer --toggle-mute
