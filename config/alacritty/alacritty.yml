@@ -11,6 +11,11 @@ window:
 
 background_opacity: 1.0
 
+shell:
+  program: /usr/bin/fish
+  args:
+    - --login
+
 schemes:
   tokyo-night: &tokyo-night
     primary:

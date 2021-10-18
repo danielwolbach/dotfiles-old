@@ -16,6 +16,7 @@ modules-left = workspace edge-black workspace-overview edge-black edge-backgroun
 modules-right = processor seperator-background memory edge-background edge-black volume edge-black edge-blue date time edge-blue
 background = ${colors.background}
 foreground = ${colors.foreground}
+bottom = true
 
 [module/workspace]
 type = internal/bspwm
@@ -45,20 +46,16 @@ type = internal/bspwm
 label-focused =
 label-focused-padding = 1
 label-focused-background = ${colors.black}
-label-focused-font = 2
 label-occupied = %index% %name%
 label-occupied-padding = 1
 label-occupied-background = ${colors.black}
-label-occupied-font = 2
 label-urgent = %index% %name%
 label-urgent-padding = 1
 label-urgent-background = ${colors.yellow}
 label-urgent-foreground = ${colors.background}
-label-urgent-font = 2
 label-empty = %index% %name%
 label-empty-padding = 1
 label-empty-background = ${colors.black}
-label-empty-font = 2
 
 [module/date]
 type = internal/date

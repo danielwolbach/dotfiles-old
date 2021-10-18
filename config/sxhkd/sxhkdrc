@@ -3,41 +3,47 @@
 super + Return
     alacritty
 
-super + p
+super + @space
     rofi -show drun
 
-super + ctrl + q
-    bspc quit
+super + p
+    rofi -show window
 
-super + ctrl + r
-    bspc wm -r
+super + ctrl + p
+    rofi -show run
+
+super + ctrl + {q, r}
+    bspc {quit, wm -r}
 
 super + q
     bspc node -c
 
-super + j
-    bspc node -f next.local.!hidden.window
+super + {j, k}
+    bspc node -f {next.local.!hidden.window, prev.local.!hidden.window}
 
-super + k
-    bspc node -f prev.local.!hidden.window
+super + {l, h}
+    bspc desktop -f {next.local, prev.local}
 
-super + l
-    bspc desktop -f next.local
+super + s
+    bspc node -s biggest.window.local
 
-super + h
-    bspc desktop -f prev.local
+super + {f, t, w}
+    bspc node -t {fullscreen, tiled, floating}
 
-super + alt + l
-    bspc node -d next.local; bspc desktop -f next.local
+super + ctrl + {h, j, k, l}
+    ~/.config/sxhkd/scripts/resize.sh {left, down, up, right} 100
 
-super + alt + h
-    bspc node -d prev.local; bspc desktop -f prev.local
+super + Tab
+    bspc desktop -f last
 
-XF86AudioRaiseVolume
-    pamixer --unmute --increase 5
+super + {1-9, 0}
+    bspc desktop -f "^{1-9, 10}"
 
-XF86AudioLowerVolume
-    pamixer --unmute --decrease 5
+super + alt + {1-9, 0}
+    bspc node -d "^{1-9, 10}"
+
+{XF86AudioRaiseVolume, XF86AudioLowerVolume}
+    pamixer --unmute {--increase, --decrease} 5
 
 XF86AudioMute
     pamixer --toggle-mute
