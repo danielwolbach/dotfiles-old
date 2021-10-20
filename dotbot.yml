@@ -16,3 +16,6 @@
       ~/.config/:
           glob: true
           path: config/**
+      ~/.local/:
+          glob: true
+          path: local/**
