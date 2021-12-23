@@ -1,8 +1,8 @@
-local lualine = require('lualine')
-lualine.setup({
+require('lualine').setup({
     options = {
-        theme = 'aquarium',
-        section_separators = '',
-        component_separators = ''
+        theme = 'auto'
+    },
+    sections = {
+        lualine_x = {'filetype'}
     }
 })

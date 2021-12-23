@@ -2,8 +2,6 @@
       link:
           create: true
           relink: true
-      clean:
-          force: true
 
 - clean:
       "~/":
@@ -11,11 +9,6 @@
           recursive: true
 
 - link:
-      ~/.bashrc:
-          path: home/bashrc
       ~/.config/:
-          glob: true
           path: config/**
-      ~/.local/:
           glob: true
-          path: local/**

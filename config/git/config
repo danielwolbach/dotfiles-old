@@ -1,9 +1,0 @@
-[user]
-    name = Daniel Wolbach
-    email = 77749247+octowaddle@users.noreply.github.com
-
-[credential "https://github.com"]
-    helper = !/usr/bin/gh auth git-credential
-
-[init]
-    defaultBranch = main
